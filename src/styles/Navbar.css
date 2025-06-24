@@ -1,58 +1,259 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
 .navbar-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1rem 2rem;
-    background-color: #ffffff; 
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* subtle shadow */
+    padding: 1.5rem 5%;
+    background-color: #121212;
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.4);
     position: sticky;
     top: 0;
     z-index: 100;
-  }
-  
-  .navbar-leftside img {
-    height: 65px;
-    width: auto;
-    transition: transform 0.3s ease;
-  }
-  
-  .navbar-leftside img:hover {
-    transform: scale(1.05);
-  }
-  
-  .navbar-rightside {
+    border-bottom: 1px solid #333;
+}
+
+.navbar-leftside .main-heading {
+    font-family: "Press Start 2P", system-ui;
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: #fff;
+    margin: 0;
+    text-shadow: 0 0 8px rgba(255, 255, 255, 0.3);
+    transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+    position: relative;
+}
+
+.navbar-leftside .main-heading:hover {
+    color: #ff5e5e;
+    text-shadow: 0 0 15px rgba(255, 94, 94, 0.6);
+    transform: scale(1.05) rotate(-1deg);
+}
+
+.navbar-leftside .main-heading::before,
+.navbar-leftside .main-heading::after {
+    content: '';
+    position: absolute;
+    height: 2px;
+    width: 0%;
+    left: 0;
+    background: linear-gradient(90deg, #ff5e5e, #ff9a5e);
+    transition: width 0.5s ease;
+}
+
+.navbar-leftside .main-heading::before {
+    bottom: -5px;
+    transition-delay: 0.1s;
+}
+
+.navbar-leftside .main-heading::after {
+    bottom: -10px;
+}
+
+.navbar-leftside .main-heading:hover::before,
+.navbar-leftside .main-heading:hover::after {
+    width: 100%;
+}
+
+.navbar-middle {
     display: flex;
-    gap: 1.5rem; 
-    align-items: center;
-  }
-  
-  .linkedin-icon, .github-icon {
-    font-size: 2rem !important; 
-    color: #333; 
+    gap: 3rem;
+}
+
+.navbar-middle p {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.2rem;
+    color: #ccc;
+    font-weight: 500;
+    margin: 0;
     cursor: pointer;
-    transition: color 0.3s ease, transform 0.3s ease;
-  }
-  
-  .linkedin-icon:hover {
-    color: #0a66c2; 
-    transform: scale(1.1);
-  }
-  
-  .github-icon:hover {
-    color: #333; 
-    transform: scale(1.1);
-  }
-  
-  @media (max-width: 768px) {
+    position: relative;
+    padding-bottom: 8px;
+    transition: all 0.3s ease;
+}
+
+.navbar-middle p::before,
+.navbar-middle p::after {
+    content: '';
+    position: absolute;
+    height: 2px;
+    width: 0%;
+    left: 0;
+    background: linear-gradient(90deg, #ff5e5e, #ff9a5e);
+    transition: width 0.4s ease;
+}
+
+.navbar-middle p::before {
+    bottom: 0;
+    transition-delay: 0.1s;
+}
+
+.navbar-middle p::after {
+    bottom: -6px;
+    transition: width 0.6s ease;
+}
+
+.navbar-middle p:hover {
+    color: #fff;
+}
+
+.navbar-middle p:hover::before,
+.navbar-middle p:hover::after {
+    width: 100%;
+}
+
+.navbar-rightside {
+    display: flex;
+    align-items: center;
+    gap: 1.8rem;
+}
+
+.linkedin-icon, .github-icon {
+    color: #ccc;
+    font-size: 2rem !important;
+    cursor: pointer;
+    padding: 0.5rem;
+    border-radius: 50%;
+    transition: color 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+                background 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+                transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.linkedin-icon {
+    background: rgba(10, 102, 194, 0);
+}
+
+.github-icon {
+    background: rgba(55, 55, 55, 0.754);
+}
+
+.linkedin-icon:hover {
+    color: white;
+    background: rgba(5, 122, 239, 0.594);
+    transform: translateY(-8px); 
+    filter: drop-shadow(0 4px 12px rgba(10, 102, 194, 0.5));
+}
+
+.github-icon:hover {
+    color: white;
+    background: rgba(255, 255, 255, 0.1);
+    transform: translateY(-8px); /* Move up, adjust value as needed */
+    filter: drop-shadow(0 4px 12px rgba(255, 255, 255, 0.4));
+}
+
+.contact-btn {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #6e45e2, #08d9d6);
+    height: 48px;
+    font-size: 1.2rem;
+    color: white;
+    border: none;
+    padding: 0.8rem 2rem;
+    border-radius: 30px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.4s ease;
+    box-shadow: 0 0 20px rgba(110, 69, 226, 0.4);
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.contact-btn:active {
+    transform: translateY(2px) scale(0.98);
+    box-shadow: 0 0 10px rgba(110, 69, 226, 0.6);
+    background: linear-gradient(135deg, #5d3acf, #07c4c1);
+}
+
+.contact-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #08d9d6, #6e45e2);
+    opacity: 0;
+    transition: all 0.4s ease;
+    z-index: -1;
+}
+
+.contact-btn:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 0 30px rgba(110, 69, 226, 0.6);
+}
+
+.contact-btn:hover::before {
+    opacity: 1;
+}
+
+.contact-btn::after {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(
+        to bottom right,
+        transparent 45%,
+        rgba(255, 255, 255, 0.3) 50%,
+        transparent 55%
+    );
+    transform: rotate(30deg);
+    animation: shine 1.8s infinite linear;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: -1;
+}
+
+.contact-btn:hover::after {
+    opacity: 1;
+}
+
+@keyframes shine {
+    from { transform: translateX(-100%) rotate(30deg); }
+    to { transform: translateX(100%) rotate(30deg); }
+}
+
+@media (max-width: 768px) {
     .navbar-container {
-      padding: 1rem;
+        flex-direction: column;
+        padding: 1.2rem;
     }
-    
-    .navbar-leftside img {
-      height: 30px;
+
+    .navbar-middle {
+        margin: 1.2rem 0;
+        gap: 2rem;
+        flex-wrap: wrap;
+        justify-content: center;
     }
-    
-    .linkedin-icon, .github-icon {
-      font-size: 1.5rem !important;
+
+    .navbar-rightside {
+        margin-top: 1.2rem;
+        gap: 1.5rem;
     }
-  }
+
+    .navbar-middle p {
+        font-size: 1.1rem;
+    }
+}
+
+@keyframes button-press {
+    0% {
+        transform: translateY(0) scale(1);
+    }
+    50% {
+        transform: translateY(3px) scale(0.97);
+    }
+    100% {
+        transform: translateY(2px) scale(0.98);
+    }
+}
+
+.contact-btn:active {
+    animation: button-press 0.2s ease-out;
+}
