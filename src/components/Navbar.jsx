@@ -15,8 +15,8 @@ export default function Navbar() {
             <p>Projects</p>
         </div>
         <div className="navbar-rightside">
-            <LinkedInIcon className='linkedin-icon'/>
-            <GitHubIcon className='github-icon'/>
+            <a href="https://www.linkedin.com/in/arnav-anand-056710315/"><LinkedInIcon className='linkedin-icon'/></a>
+            <a href="https://github.com/arnavanand2005"><GitHubIcon className='github-icon'/></a>
             <button className='contact-btn'>Lets Connect</button>
         </div>
     </nav>
