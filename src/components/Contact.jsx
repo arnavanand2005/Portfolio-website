@@ -1,5 +1,6 @@
 import React from "react";
-
+import contactimage from "../assets/contact.jpg";
+import '../styles/contact.css'
 function App() {
   const [result, setResult] = React.useState("");
 
@@ -28,12 +29,20 @@ function App() {
 
   return (
     <div>
-      <form onSubmit={onSubmit}>
-        <input type="text" name="name" required/>
-        <input type="email" name="email" required/>
-        <textarea name="message" required></textarea>
-        <button type="submit">Submit Form</button>
-
+        <h2>Lets Get In Touch</h2>
+      <form className="contact-form" onSubmit={onSubmit}>
+        <div className="left-side-contact">
+            <img src={contactimage} alt="contact-image" />
+        </div>
+        <div className="input-elements">
+            <label >Name : </label>
+            <input type="text" placeholder="Enter your name here..." name="name" required/> <br />
+            <label >Email : </label>
+            <input type="email" placeholder="Enter your Email here..." name="email" required/> <br />   
+            <label> Message : </label>    
+            <textarea placeholder="Enter your message here ..." name="message" required></textarea>
+            <button className="submit-btn" type="submit">Submit Form</button>
+        </div>
       </form>
       <span>{result}</span>
 

@@ -28,8 +28,8 @@ body {
 }
 
 .navbar-leftside .main-heading:hover {
-    color: #ff5e5e;
-    text-shadow: 0 0 15px rgba(255, 94, 94, 0.6);
+    color: #138aeb;
+    text-shadow: 0 0 7px rgba(13, 164, 224, 0.575);
     transform: scale(1.05) rotate(-1deg);
 }
 
@@ -40,7 +40,7 @@ body {
     height: 2px;
     width: 0%;
     left: 0;
-    background: linear-gradient(90deg, #ff5e5e, #ff9a5e);
+    background: linear-gradient(90deg, #2143ff, #00ccff);
     transition: width 0.5s ease;
 }
 
@@ -82,7 +82,7 @@ body {
     height: 2px;
     width: 0%;
     left: 0;
-    background: linear-gradient(90deg, #ff5e5e, #ff9a5e);
+    background: linear-gradient(90deg, #5eb7ff, #143af9);
     transition: width 0.4s ease;
 }
 
@@ -123,11 +123,11 @@ body {
 }
 
 .linkedin-icon {
-    background: rgba(10, 102, 194, 0);
+    background: rgba(0, 0, 0, 0);
 }
 
 .github-icon {
-    background: rgba(55, 55, 55, 0.754);
+    background: rgba(0, 0, 0, 0.754);
 }
 
 .linkedin-icon:hover {
