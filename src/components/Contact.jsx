@@ -1,6 +1,8 @@
 import React from "react";
 import contactimage from "../assets/contact.jpg";
 import '../styles/contact.css'
+import EmailIcon from '@mui/icons-material/Email';
+
 function App() {
   const [result, setResult] = React.useState("");
 
@@ -27,7 +29,7 @@ function App() {
   };
 
   return (
-    <div>
+    <div className="contact-container">
         <h2 className="main-contact-heading">Lets Get In Touch</h2>
       <form className="contact-form" onSubmit={onSubmit}>
         <div className="left-side-contact">
