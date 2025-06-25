@@ -38,6 +38,7 @@
   text-shadow: 0 0 10px rgba(8, 217, 214, 0.5);
   position: relative;
   z-index: 1;
+  padding-bottom: 5px;
 }
 
 .main-contact-heading::after {
@@ -176,7 +177,6 @@
   filter: drop-shadow(0 0 10px rgba(8, 217, 214, 0.9));
 }
 
-/* Input Elements with Right Padding */
 .input-elements {
   flex: 1;
   min-width: 300px;
@@ -184,6 +184,8 @@
   flex-direction: column;
   gap: 1.5rem;
   padding-right: 2rem;
+  border-radius: 5px;
+  align-items: center;
 }
 
 .input-elements label {
@@ -200,7 +202,7 @@
   padding: 14px 18px;
   border: none;
   border-radius: 8px;
-  font-size: 1rem;
+  font-size: 1.13rem;
   background: rgba(255, 255, 255, 0.1);
   color: #fff;
   border: 1px solid #333;
