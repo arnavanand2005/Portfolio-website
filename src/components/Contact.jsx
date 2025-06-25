@@ -8,7 +8,6 @@ function App() {
     event.preventDefault();
     setResult("Sending....");
     const formData = new FormData(event.target);
-
     formData.append("access_key", "7e428775-c488-4c43-8478-7cd6dabbfd89");
 
     const response = await fetch("https://api.web3forms.com/submit", {
@@ -29,18 +28,20 @@ function App() {
 
   return (
     <div>
-        <h2>Lets Get In Touch</h2>
+        <h2 className="main-contact-heading">Lets Get In Touch</h2>
       <form className="contact-form" onSubmit={onSubmit}>
         <div className="left-side-contact">
             <img src={contactimage} alt="contact-image" />
         </div>
         <div className="input-elements">
             <label >Name : </label>
-            <input type="text" placeholder="Enter your name here..." name="name" required/> <br />
+            <input type="text" placeholder="Enter name here..." name="name" required/> <br />
             <label >Email : </label>
-            <input type="email" placeholder="Enter your Email here..." name="email" required/> <br />   
-            <label> Message : </label>    
-            <textarea placeholder="Enter your message here ..." name="message" required></textarea>
+            <input type="email" placeholder="Enter Email here..." name="email" required/> <br /> 
+            <label >Phone Number :</label>
+            <input type="number" placeholder="Enter phone number..."  name="phone" required/> <br />     
+            <label> Message : </label> 
+            <textarea placeholder="Enter message here ..." name="message" required></textarea>
             <button className="submit-btn" type="submit">Submit Form</button>
         </div>
       </form>
