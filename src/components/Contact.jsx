@@ -1,7 +1,6 @@
 import React from "react";
 import contactimage from "../assets/contact.jpg";
 import '../styles/contact.css'
-import EmailIcon from '@mui/icons-material/Email';
 
 function App() {
   const [result, setResult] = React.useState("");
