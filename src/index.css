@@ -1,4 +1,8 @@
-/* global.css */
+body{
+  margin: 0%;
+  padding: 0%;
+}
+
 :root {
     /* Color Palette */
     --dark-bg: #0a192f;        /* Deep navy blue */
