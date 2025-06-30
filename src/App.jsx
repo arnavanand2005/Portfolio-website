@@ -1,13 +1,13 @@
 import React from 'react'
 import Navbar from './components/Navbar'
 import Contact from './components/Contact'
-import About from './components/About'
+import Home from './components/Home'
 
 export default function App() {
   return (
     <div>
         <Navbar />
-        <About />
+        <Home />
         <Contact />
     </div>
   )
