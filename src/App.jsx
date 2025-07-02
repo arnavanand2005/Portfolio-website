@@ -6,8 +6,8 @@ import Home from './components/Home'
 export default function App() {
   return (
     <>
-      <div className="fixed inset-0 -z-10 min-h-screen w-full bg-[radial-gradient(125%_125%_at_50%_10%,#000_40%,#63e_100%)]"></div>
-      <div>
+<div className="fixed inset-0 -z-10 min-h-screen w-full bg-[radial-gradient(125%_125%_at_50%_10%,#000_40%,#2563eb_100%)]"></div>
+<div>
         <Navbar />
         <Home />
         <Contact />
