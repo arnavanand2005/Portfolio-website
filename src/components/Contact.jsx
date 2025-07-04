@@ -1,6 +1,7 @@
 import React from "react";
 import contactimage from "../assets/contact.jpg";
 import '../styles/contact.css'
+import { Element } from "react-scroll";
 
 function App() {
   const [result, setResult] = React.useState("");
@@ -28,6 +29,7 @@ function App() {
   };
 
   return (
+    <Element name="contact-section" className="contact-section">
     <div className="contact-container">
         <h2 className="main-contact-heading">Lets Get In Touch</h2>
       <form className="contact-form" onSubmit={onSubmit}>
@@ -47,9 +49,8 @@ function App() {
         </div>
       </form>
       <span>{result}</span>
-
     </div>
+    </Element>
   );
 }
-
 export default App;
