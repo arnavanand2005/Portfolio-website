@@ -23,7 +23,7 @@ const Skills = () => {
 
   const iconClasses = 'text-7xl'; 
 
-  const iconContainerClasses = 'rounded-2xl border-4 border-neutral-800 p-4 flex items-center justify-center';
+  const iconContainerClasses = 'rounded-2xl border-4 border-neutral-800 p-4 flex items-center justify-center transition duration-300 hover:scale-105';
 
 
   return (
@@ -53,7 +53,7 @@ const Skills = () => {
       <div className='flex-wrap flex items-center justify-center gap-7'>
 
         <motion.div  animate="animate" initial="initial" variants={floatVariants(2.5)}
-        className={iconContainerClasses}>
+        className={`${iconContainerClasses} hover:border-amber-300`}>
         <FaPython
             className={`
               ${iconClasses}
@@ -64,35 +64,35 @@ const Skills = () => {
           </motion.div>
 
         <motion.div  animate="animate" initial="initial" variants={floatVariants(3)}
-         className={iconContainerClasses}>
+         className={`${iconContainerClasses} hover:border-cyan-500`}>
           <FaReact className={`text-cyan-400 ${iconClasses}`} />
         </motion.div>
 
-        <motion.div animate="animate" variants={floatVariants(2)} initial="initial" className={iconContainerClasses}>
+        <motion.div animate="animate" variants={floatVariants(2)} initial="initial" className={`${iconContainerClasses} hover:border-orange-400`}>
           <FaHtml5 className={`text-orange-600 ${iconClasses}`} />
         </motion.div>
 
-        <motion.div animate="animate" variants={floatVariants(3.5)} initial="initial" className={iconContainerClasses}>
+        <motion.div animate="animate" variants={floatVariants(3.5)} initial="initial" className={`${iconContainerClasses} hover:border-blue-500`}>
           <FaCss3Alt className={`text-blue-500 ${iconClasses}`} />
         </motion.div>
 
-        <motion.div animate="animate" variants={floatVariants(5)} initial="initial" className={iconContainerClasses}>
+        <motion.div animate="animate" variants={floatVariants(5)} initial="initial" className={`${iconContainerClasses} hover:border-yellow-200`}>
           <DiJavascript className={`text-yellow-400 ${iconClasses}`} />
         </motion.div>
 
-        <motion.div animate="animate" variants={floatVariants(3.6)} initial="initial" className={iconContainerClasses}>
+        <motion.div animate="animate" variants={floatVariants(3.6)} initial="initial" className={`${iconContainerClasses} hover:border-white`}>
           <SiExpress className={`text-neutral-500 ${iconClasses}`} />
         </motion.div>
 
-        <motion.div animate="animate" variants={floatVariants(4.3)} initial="initial" className={iconContainerClasses}>
+        <motion.div animate="animate" variants={floatVariants(4.3)} initial="initial" className={`${iconContainerClasses} hover:border-green-400`}>
           <SiMongodb className={`text-green-500 ${iconClasses}`} />
         </motion.div>
 
-        <motion.div animate="animate" variants={floatVariants(3.8)} initial="initial" className={iconContainerClasses}>
+        <motion.div animate="animate" variants={floatVariants(3.8)} initial="initial" className={`${iconContainerClasses} hover:border-purple-500`}>
           <SiVite className={`text-purple-500 ${iconClasses}`} />
         </motion.div>
 
-        <motion.div animate="animate" variants={floatVariants(2.4)} initial="initial" className={iconContainerClasses}>
+        <motion.div animate="animate" variants={floatVariants(2.4)} initial="initial" className={`${iconContainerClasses} hover:border-blue-700`}>
         <RiTailwindCssLine
             className={`
               text-cyan-700       
