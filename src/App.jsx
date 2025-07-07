@@ -11,6 +11,7 @@ export default function App() {
 <div>
         <Navbar />
         <Home />
+        <div className=' border-neutral-800 '></div>
         <Skills />
         <Contact />
       </div>
