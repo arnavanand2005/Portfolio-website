@@ -11,7 +11,7 @@ const Skills = () => {
   const floatVariants = (duration) => ({
     initial: {y:0},
     animate: {
-      y:[-10,10],
+      y:[-20,20],
       transition: {
         repeat : Infinity,
         duration: duration,
@@ -92,7 +92,7 @@ const Skills = () => {
           <SiVite className={`text-purple-500 ${iconClasses}`} />
         </motion.div>
 
-        <motion.div animate="animate" variants={floatVariants(2.4)} initial="initial" className={`${iconContainerClasses} hover:border-blue-700`}>
+        <motion.div animate="animate" variants={floatVariants(2.4)} initial="initial" className={`${iconContainerClasses} hover:border-teal-600`}>
         <RiTailwindCssLine
             className={`
               text-cyan-700       

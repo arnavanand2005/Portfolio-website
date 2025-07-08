@@ -11,7 +11,7 @@ export default function Navbar() {
             <h3 className='main-heading'>Arnav Anand</h3>
         </div>
         <div className="navbar-middle">
-            <p>Home</p>
+            <Link to='home' offset={-30} smooth={true} duration={500}>Home</Link>
             <p>Skills</p>
             <p>Projects</p>
         </div>

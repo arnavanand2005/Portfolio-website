@@ -1,8 +1,10 @@
 import React from 'react';
 import '../styles/Home.css';
+import { Element } from 'react-scroll';
 
 export default function Home() {
   return (
+    <Element name="home" className="home-element">
     <div className='home-container'>
         <div className="home-leftside">
             <h1 className='main-heading-home'>👋 Hi, I'm Arnav Anand!</h1>
@@ -34,5 +36,6 @@ export default function Home() {
             <img src="" alt="Arnav Anand" className="profile-image" />
         </div>
     </div>
+    </Element>
   );
 }
