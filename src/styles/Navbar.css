@@ -4,17 +4,64 @@ body {
 }
 
 .navbar-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1.5rem 5%;
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    padding-top: 1.5rem; 
+    padding-bottom: 1.5rem; 
     background-color: #121212;
     box-shadow: 0 2px 20px rgba(0, 0, 0, 0.4);
     position: sticky;
     top: 0;
     z-index: 100;
     border-bottom: 1px solid #333;
+    width: 100%; 
+    box-sizing: border-box; 
 }
+
+.navbar-content-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%; /* Take up all available width within its parent */
+    max-width: 1280px; /* ⭐ ADJUST THIS VALUE ⭐: This is your content's maximum width. Common values are 1024px, 1280px, 1440px etc. */
+    padding: 0 5%; /* Apply the horizontal padding here */
+    box-sizing: border-box; /* Crucial for this div with width/max-width and padding */
+}
+
+/* Your existing styles for .navbar-leftside, .navbar-middle, .navbar-rightside will remain the same */
+/* The @media (max-width: 768px) block might also need adjustments to padding on .navbar-content-wrapper for responsiveness */
+
+@media (max-width: 768px) {
+    .navbar-container {
+        /* You might want to remove justify-content: center; here if you want it left-aligned on mobile */
+        /* and maybe adjust vertical padding */
+        padding: 1.2rem; /* Keep existing mobile vertical padding */
+    }
+
+    .navbar-content-wrapper { /* Adjust for mobile if needed */
+        flex-direction: column; /* This will stack your left, middle, right sections */
+        padding: 0 1.2rem; /* Adjust horizontal padding for smaller screens */
+        max-width: 100%; /* Ensure it doesn't get too wide on small screens either */
+    }
+
+    .navbar-middle {
+        margin: 1.2rem 0;
+        gap: 2rem;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .navbar-rightside {
+        margin-top: 1.2rem;
+        gap: 1.5rem;
+    }
+    .navbar-middle a {
+        font-size: 1.1rem;
+    }
+}
+
+
 
 .navbar-leftside .main-heading {
     font-family: "Press Start 2P", system-ui;

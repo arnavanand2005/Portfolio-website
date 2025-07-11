@@ -5,6 +5,7 @@ import { DiJavascript } from "react-icons/di";
 import { GrTechnology } from "react-icons/gr";
 import { RiTailwindCssLine } from "react-icons/ri";
 import {animate, motion } from 'framer-motion';
+import { Element } from 'react-scroll';
 
 const Skills = () => {
 
@@ -27,6 +28,7 @@ const Skills = () => {
 
 
   return (
+    <Element name="skills">
     <div className='border-b border-neutral-800 pb-24'>
           <h1 className='text-6xl font-bold text-center font-serif mb-10'>
         <span
@@ -103,6 +105,7 @@ const Skills = () => {
 
       </div>
     </div>
+    </Element>
   );
 };
 
